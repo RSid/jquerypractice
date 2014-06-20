@@ -12,41 +12,30 @@ getRandomNumber();
 
 
 $(document).ready(function(){
-    $("#guess").keyup(function(){
-        guess = $('#guess').val()
+  $("#guess").keyup(function(){
 
-        if (guess == answer) {
+    guess = $('#guess').val()
+    debugger
+      if( !isNaN(Number(guess)) ) {
+        if (Number(guess) == answer) {
           $('#feedback').text('Nice! You win');
           $('#newgame').show();
 
+        } else {
+
+          if (Number(guess) < answer) {
+            $('#feedback').text('Nope! Too low.');
+
           } else {
-
-              if (guess < answer) {
-                $('#feedback').text('Nope! Too low.');
-
-              } else {
-                $('#feedback').text('Nope! Too high.');
-
-              }
+            $('#feedback').text('Nope! Too high.');
 
           }
+          }
+      } else {
+        $('#feedback').text('Please enter a number between 1 and 10');
+      }
 
     });
 
 })
 
-
-// var name = prompt("What's your name?");
-// guess = Number(prompt('Hi ' + name + '! Guess a number between 1 and 10!'));
-
-// console.log(answer)
-// console.log(guess)
-
-// if (guess == answer) {
-//   alert('Nice! You win')
-
-// } else {
-
-//   alert('Nope! Loooooser.')
-
-// }
