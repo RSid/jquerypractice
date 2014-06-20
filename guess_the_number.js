@@ -3,6 +3,7 @@ var guess;
 var max = 10;
 
 $('#max').text(max);
+$('#newgame').hide();
 
 function getRandomNumber() {
   answer = Math.round((Math.random() * max) + 1);
@@ -12,11 +13,11 @@ getRandomNumber();
 
 $(document).ready(function(){
     $("#guess").keyup(function(){
-      // debugger
         guess = $('#guess').val()
 
         if (guess == answer) {
           $('#feedback').text('Nice! You win');
+          $('#newgame').show();
 
           } else {
 
