@@ -16,11 +16,17 @@ $(document).ready(function(){
         guess = $('#guess').val()
 
         if (guess == answer) {
-            alert('Nice! You win')
+          $('#feedback').text('Nice! You win');
 
           } else {
 
-            alert('Nope! Guess again.')
+              if (guess < answer) {
+                $('#feedback').text('Nope! Too low.');
+
+              } else {
+                $('#feedback').text('Nope! Too high.');
+
+              }
 
           }
 
