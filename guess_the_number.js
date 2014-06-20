@@ -15,9 +15,9 @@ $(document).ready(function(){
   $("#guess").keyup(function(){
 
     guess = $('#guess').val()
-    debugger
+
       if( !isNaN(Number(guess)) ) {
-        if (Number(guess) == answer) {
+        if (Number(guess) === answer) {
           $('#feedback').text('Nice! You win');
           $('#newgame').show();
 

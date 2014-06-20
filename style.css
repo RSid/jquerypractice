@@ -1,0 +1,17 @@
+html {
+  background: url('space.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+
+p {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  font-family: "Andale Mono", AndaleMono, monospace;
+}
+
+form {
+  text-align: center;
+}
